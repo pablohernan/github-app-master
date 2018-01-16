@@ -272,22 +272,36 @@
               },
               buttons: [
                 {
-                  text: 'Meu botão',
-                  onclick: function(){alert('test')},
+                  text: 'Shopping',
                   callback: function(p) {
-                    getToken(p).then(function(token) {
-                      if (token && token !== "null") {
-                        showInitialDropdown(p);
-                      } else {
-                        showAuthorizeDropdown(p);
-                      }
-                    });
+                    showShopping();
                   }
                 },
               ]
             }
           },
         });
+
+      var showShopping = function(p) {
+        p.dropdown({
+          title: "Shopping",
+          items: [
+            {
+              title: 'Barra Shopping',
+              callback: function(p) {
+                alert('Barra Shopping:1')
+              }
+            },
+            {
+              title: 'Downtown',
+              callback: function(p) {
+                alert('Downtown:1')
+              }
+            },            
+          ],
+        });
+      };
+
 
         // Cache Github token when App starts
         var p  = pipefyClient.client()
