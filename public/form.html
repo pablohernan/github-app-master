@@ -34,6 +34,7 @@
     $.ajax({ 
         url: "/services/servico.json?"+Math.random()
     }).then(function(data) {
+          alert(data);
           var data = JSON.parse(data);     
           alert(data); 
     });
