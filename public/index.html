@@ -56,6 +56,7 @@
       var showInitialDropdown = function(p) {
         // Simple list of items with callback
         p.dropdown({
+          title: 'Shopping',
           items: [
             {
               title: 'Barra Shopping',
@@ -279,6 +280,20 @@
               buttons: [
                 {
                   text: 'Shopping',
+                  callback: function(p) {
+                    showInitialDropdown(p);
+                    /*
+                    getToken(p).then(function(token) {
+                      if (token && token !== "null") {
+                        showInitialDropdown(p);
+                      } else {
+                        showAuthorizeDropdown(p);
+                      }
+                    });*/
+                  }
+                },
+                {
+                  text: 'Shopping 2',
                   callback: function(p) {
                     showInitialDropdown(p);
                     /*
