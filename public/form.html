@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/pipestyle/3.5.12/assets/stylesheets/platform-apps.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
       svg {
         fill: currentColor;
@@ -27,7 +28,18 @@
         <option value="4">Empresa 4</option>
       </select>
 
+<script>
+  
+    /* popula shopping*/
+    \$.ajax({ 
+        url: "/shoppings.json?"+Math.random()
+    }).then(function(data) {
+          var data = JSON.parse(data);     
+          alert(data); 
+    });
+    /* popula shopping*/
 
+</script>
 
   </body>
 </html>

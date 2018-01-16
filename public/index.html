@@ -54,23 +54,10 @@
               },
               buttons: [
                 {
-                  text: 'Shopping',
+                  text: 'Salvar',
                   callback: function(p) {
-                    showInitialDropdown(p);
-                    /*
-                    getToken(p).then(function(token) {
-                      if (token && token !== "null") {
-                        showInitialDropdown(p);
-                      } else {
-                        showAuthorizeDropdown(p);
-                      }
-                    });*/
-                  }
-                },
-                {
-                  text: 'Shopping 2',
-                  callback: function(p) {
-                    showInitialDropdown(p);
+                    //showInitialDropdown(p);
+                    p.showNotification('Formulario salvo!', 'success');
                     /*
                     getToken(p).then(function(token) {
                       if (token && token !== "null") {
