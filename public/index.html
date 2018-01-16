@@ -54,16 +54,23 @@
 
 
       var showInitialDropdown = function(p) {
+        // Simple list of items with callback
         p.dropdown({
-          title: "Github",
+          title: 'Emoji app',
           items: [
             {
-              title: 'Attach Pull Request',
-              callback: function(p) {
-                searchRepositories(p)
-              }
+              title: '😈  Set Card Emoji',
+              callback:  function(p) { /*...*/ },
             },
-          ],
+            {
+              title: '😎  Open Modal',
+              callback: function(p) { /*p.modal(...)*/ },
+            },
+            {
+              title: '👋  Close card',
+              callback: function(p) { p.closeCard() },
+            },
+          ]
         });
       };
 
