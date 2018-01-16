@@ -12,8 +12,11 @@
 </head>
   <body>
 
-      <label class="pp-label-text">Shoppings</label>
-      <select id="shopping" class="pp-custom-select" onchange="populaEmpresa($(this).val())"> 
+
+
+
+      <label for="shopping"><b class="pp-label-text">Shoppings</b></label>
+      <select id="shopping" name="shopping" class="pp-custom-select" onchange="populaEmpresa($(this).val())"> 
       <!--
         <option value="1">Shopping 1</option>
         <option value="2">Shopping 2</option>
@@ -22,8 +25,8 @@
       -->  
       </select>
 <br>      
-      <label class="pp-label-text">Empresa</label>
-      <select id="empresa" class="pp-custom-select" onchange="alert(this.selectedIndex)"> 
+      <label for="empresa"><b class="pp-label-text">Empresa</b></label>
+      <select id="empresa" name="empresa" class="pp-custom-select" onchange="alert(this.selectedIndex)"> 
       <!--
         <option value="1">Empresa 1</option>
         <option value="2">Empresa 2</option>
