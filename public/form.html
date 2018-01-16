@@ -13,34 +13,55 @@
   <body>
 
       <label class="pp-label-text">Shoppings</label>
-      <select class="pp-custom-select" onchange="alert(this.selectedIndex)"> 
+      <select class="pp-custom-select" onchange="populaEmpresa($(this).val())"> 
+      <!--
         <option value="1">Shopping 1</option>
         <option value="2">Shopping 2</option>
         <option value="3">Shopping 3</option>
         <option value="4">Shopping 4</option>
+      -->  
       </select>
 <br>      
       <label class="pp-label-text">Empresa</label>
       <select id="empresa" class="pp-custom-select" onchange="alert(this.selectedIndex)"> 
+      <!--
         <option value="1">Empresa 1</option>
         <option value="2">Empresa 2</option>
         <option value="3">Empresa 3</option>
         <option value="4">Empresa 4</option>
+      -->  
       </select>
 
 <script>
 
-    /* popula shopping*/
+  /* popula shopping*/
+  $.ajax({ 
+      url: "/services/shoppings.json?"+Math.random()
+  }).then(function(data) {
+        //var data = JSON.parse(data);  
+        console.log(data)   
+        for( var i = 0 ; i < data.length ; i++ ){
+            $('#shopping').append('<option value=' + data[i].value + '>' + data[i].value + ' - ' +data[i].text + '</option>'); 
+        }     
+
+  });
+  /* popula shopping*/
+
+  function populaEmpresa(value){
+    /* popula empresa*/
     $.ajax({ 
-        url: "/services/shoppings.json?"+Math.random()
+        url: "/services/empresas.json?"+Math.random()
     }).then(function(data) {
-          //var data = JSON.parse(data);     
+          //var data = JSON.parse(data);  
+          console.log(data)   
           for( var i = 0 ; i < data.length ; i++ ){
               $('#empresa').append('<option value=' + data[i].value + '>' + data[i].value + ' - ' +data[i].text + '</option>'); 
           }     
 
     });
-    /* popula shopping*/
+    /* popula empresa*/
+  }
+
 
 </script>
 
