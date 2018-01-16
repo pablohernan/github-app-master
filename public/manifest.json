@@ -1,0 +1,15 @@
+{
+  "name": "Github",
+  "short_description": "Manage all pull requests directly in Pipefy",
+  "description": "Manage all pull requests directly in Pipefy",
+  "icon": "./images/icon.png",
+  "author": "Pipefy Inc",
+  "init_url": "./",
+  "screenshots": ["./images/screenshots/1.png"],
+  "features": [
+    "card-buttons",
+    "card-badges",
+    "pipe-buttons",
+    "settings-button"
+  ]
+}
