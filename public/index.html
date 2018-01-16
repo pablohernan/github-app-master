@@ -56,18 +56,18 @@
       var showInitialDropdown = function(p) {
         // Simple list of items with callback
         p.dropdown({
-          title: 'Emoji app',
+          title: 'Shopping',
           items: [
             {
-              title: '😈  Set Card Emoji',
-              callback:  function(p) { /*...*/ },
+              title: 'Barra Shopping',
+              callback:  function(p) { p.showNotification('Barra shopping selecionado', 'success'); },
             },
             {
-              title: '😎  Open Modal',
+              title: 'Downtown',
               callback: function(p) { /*p.modal(...)*/ },
             },
             {
-              title: '👋  Close card',
+              title: 'Salvador Shopping',
               callback: function(p) { p.closeCard() },
             },
           ]
