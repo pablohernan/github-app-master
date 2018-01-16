@@ -41,17 +41,6 @@
 
       document.addEventListener("DOMContentLoaded", function(event) {
         pipefyClient.initCall({
-          'card-badges': function(p, options){
-              return [
-                {
-                  live: getCountBadge,
-                },
-                {
-                  live: getMergedBadge,
-                  refreshInterval: 100,
-                },
-              ];
-          },
           'card-tab': function(p, options) {
             return {
               icon: './images/power-cord.svg',
