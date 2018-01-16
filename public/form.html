@@ -32,7 +32,7 @@
   alert('aa');
     /* popula shopping*/
     $.ajax({ 
-        url: "/shoppings.json?"+Math.random()
+        url: "/services/shoppings.json?"+Math.random()
     }).then(function(data) {
           var data = JSON.parse(data);     
           alert(data); 
