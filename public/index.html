@@ -273,6 +273,7 @@
               buttons: [
                 {
                   text: 'Meu botão',
+                  onclick: function(){alert('test')}
                   callback: function(p) {
                     getToken(p).then(function(token) {
                       if (token && token !== "null") {
