@@ -15,7 +15,7 @@
 
 
 
-      <label for="shopping"><b class="pp-label-text">Shoppings</b></label>
+      <label for="shopping"><b class="pp-label-text">Shopping</b></label>
       <select id="shopping" name="shopping" class="pp-custom-select" onchange="populaEmpresa($(this).val())"> 
       <!--
         <option value="1">Shopping 1</option>
@@ -58,7 +58,7 @@
           //var data = JSON.parse(data);  
           $('#empresa').html('');
           for( var i = 0 ; i < data.length ; i++ ){
-              $('#empresa').append('<option value=' + data[i].value + '>' + data[i].value + ' - ' +data[i].text + '</option>'); 
+              $('#empresa').append('<option value=' + data[i].value + '>' + value + ' - ' +data[i].text + '</option>'); 
           }     
     });
     /* popula empresa*/
