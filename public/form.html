@@ -32,10 +32,9 @@
   alert('aa');
     /* popula shopping*/
     $.ajax({ 
-        url: "/services/servico.json?"+Math.random()
+        url: "/services/shoppings.json?"+Math.random()
     }).then(function(data) {
-          alert(data);
-          var data = JSON.parse(data);     
+          //var data = JSON.parse(data);     
           alert(data); 
     });
     /* popula shopping*/
