@@ -39,11 +39,11 @@
       url: "/services/shoppings.json?"+Math.random()
   }).then(function(data) {
         //var data = JSON.parse(data);  
-        console.log(data)   
         for( var i = 0 ; i < data.length ; i++ ){
             $('#shopping').append('<option value=' + data[i].value + '>' + data[i].value + ' - ' +data[i].text + '</option>'); 
-        }     
-
+        } 
+        if(data.length>0)
+          populaEmpresa(data[0].value);
   });
   /* popula shopping*/
 
@@ -53,11 +53,10 @@
         url: "/services/empresas.json?"+Math.random()
     }).then(function(data) {
           //var data = JSON.parse(data);  
-          console.log(data)   
+          $('#empresa').html('');
           for( var i = 0 ; i < data.length ; i++ ){
               $('#empresa').append('<option value=' + data[i].value + '>' + data[i].value + ' - ' +data[i].text + '</option>'); 
           }     
-
     });
     /* popula empresa*/
   }
