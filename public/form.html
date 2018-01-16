@@ -21,7 +21,7 @@
       </select>
 <br>      
       <label class="pp-label-text">Empresa</label>
-      <select class="pp-custom-select" onchange="alert(this.selectedIndex)"> 
+      <select id="empresa" class="pp-custom-select" onchange="alert(this.selectedIndex)"> 
         <option value="1">Empresa 1</option>
         <option value="2">Empresa 2</option>
         <option value="3">Empresa 3</option>
@@ -29,13 +29,16 @@
       </select>
 
 <script>
-  alert('aa');
+
     /* popula shopping*/
     $.ajax({ 
         url: "/services/shoppings.json?"+Math.random()
     }).then(function(data) {
           //var data = JSON.parse(data);     
-          alert(data); 
+          for( var i = 0 ; i < data.length ; i++ ){
+              $('#empresa').append('<option value=' + data[i].value + '>' + data[i].value + ' - ' +data[i].text + '</option>'); 
+          }     
+
     });
     /* popula shopping*/
 
