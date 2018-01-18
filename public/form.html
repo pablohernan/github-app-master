@@ -53,7 +53,9 @@
     /* popula empresa*/
   }
 
-  var p = PipefyApp.init();
+
+  var Promise = pipefyClient.Promise;
+  var p  = pipefyClient.client()
   p.set('card', 'public', 'test', 'sisisisis');
 
 
