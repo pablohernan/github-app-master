@@ -8,6 +8,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script type="text/javascript" src="./js/table.js"></script>
+
+
+    <label id="label1">hola</label>
+      <label for="shopping1"><b class="pp-label-text">Shopping</b></label>
+      <select id="shopping1" name="shopping" class="pp-custom-select" onchange="populaEmpresa($(this).val())"> 
+      </select>    
+
     <script>
       // Use Promise available from pipefyClient
       var Promise = pipefyClient.Promise;
