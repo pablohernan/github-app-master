@@ -18,6 +18,7 @@
     "pug": "^2.0.0-rc.2",
     "react": "next",
     "react-dom": "next",
+    "react-pipestyle": "^0.1.32",
     "request": "^2.81.0",
     "webpack": "^2.4.1"
   },
