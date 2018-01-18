@@ -61,6 +61,14 @@
                     //showInitialDropdown(p);
                    // alert( document.getElementById('shopping').value );
 
+  p.get('card', 'public', 'test').then((test) => {
+ alert(test); // return actual value stored
+  }).catch((error) => {
+    // Handle error
+    console.log(error);
+  });
+
+
                     alert( $('.xcomponent-outlet').find('iframe').content().find('#shopping').val() );               
                     p.showNotification('Formulario salvo!', 'success');
                     /*
