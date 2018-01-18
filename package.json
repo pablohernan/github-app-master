@@ -1,7 +1,7 @@
 {
-  "name": "github-app",
+  "name": "startform",
   "version": "0.1.0",
-  "description": "Pipefy github app",
+  "description": "DM Form",
   "main": "server.js",
   "dependencies": {
     "babel-core": "^6.25.0",
