@@ -1,4 +1,7 @@
 
+
+
+function createtable(){
 var request = new XMLHttpRequest();
 
 request.open('POST', 'https://app.pipefy.com/queries');
@@ -19,3 +22,5 @@ var body = {
 };
 
 request.send(JSON.stringify(body));
+
+}
