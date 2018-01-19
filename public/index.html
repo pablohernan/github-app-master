@@ -42,8 +42,6 @@
      
 
       document.addEventListener("DOMContentLoaded", function(event) {
-
-
         pipefyClient.initCall({
           'card-tab': function(p, options) {
             return {
@@ -60,12 +58,26 @@
                 {
                   text: 'Salvar',
                   callback: function(p) {
-
-                    var empresaVal = document.getElementById('empresa').value;
-
-                    p.set('card', 'public', 'empresa', empresaVal );
+                    //showInitialDropdown(p);
+                   // alert( document.getElementById('shopping').value );
+ //p.set('card', 'public', 'test', 'sisisisis');
+ // p.set('card', 'public', 'emoji', 'emoji');
+ p.get('card', 'public', 'test').then((test) => {
+    alert(test); // return actual value stored
+  }).catch((error) => {
+    // Handle error
+    console.log(error);
+  });
+            
                     p.showNotification('Formulario salvo!', 'success');
-
+                    /*
+                    getToken(p).then(function(token) {
+                      if (token && token !== "null") {
+                        showInitialDropdown(p);
+                      } else {
+                        showAuthorizeDropdown(p);
+                      }
+                    });*/
                   }
                 },
               ]
@@ -82,13 +94,7 @@
           } catch(err) {
           }
         })
-
       });
-
-
-
-
     </script>
-
   </body>
 </html>

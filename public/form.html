@@ -58,10 +58,17 @@
 
 
 
-  var p = PipefyApp.init();
-  p.set('card', 'public', 'test', 'nooooooooo');
+  
+  //p.set('card', 'public', 'test', 'nooooooooo');
 
   function close(){
+   var p = PipefyApp.init();
+   p.get('card', 'public', 'test').then((test) => {
+      alert(test); // return actual value stored
+    }).catch((error) => {
+      // Handle error
+      console.log(error);
+    });
     p.closeDropdown();
   }
 
