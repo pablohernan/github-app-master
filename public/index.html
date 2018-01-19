@@ -50,7 +50,12 @@
             return {
               icon: './images/power-cord.svg',
               title: 'DM Consultoria',
-              url: './form.html'
+              url: './form.html',
+              claimedAttachments: function(attachments) {
+                // Iterate by all attachment to claim attachments from Github
+                return attachments.filter(function(attachment){
+                  return attachment.url.indexOf('https://github.com') === 0;
+                });
               },
               buttons: [
                 {
