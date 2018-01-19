@@ -12,6 +12,7 @@
     </style>
 </head>
   <body>
+  <div id="content">
       <label for="shopping"><b class="pp-label-text">Shopping</b></label>
       <select id="shopping" name="shopping" class="pp-custom-select" onchange="populaEmpresa($(this).val())"> 
       </select>
@@ -19,13 +20,12 @@
       <label for="empresa"><b class="pp-label-text">Empresa</b></label>
       <select id="empresa" name="empresa" class="pp-custom-select" onchange="alert(this.selectedIndex)"> 
       </select>
-<br>
+      <br>
 
-<a href="javascript:close()" class="pp-btn"><span>Salvar</span></a>
-<br>
-<br>
-<br>
-<br>
+      <a href="javascript:close()" class="pp-btn"><span>Salvar</span></a>
+      <br>
+      <br>
+  </div>
 <script>
 
   /* popula shopping*/
@@ -56,8 +56,8 @@
   }
 
 
-
-
+PipefyApp.resizeTo('#content');
+pipefyClient.resizeTo('#content');
   
   //p.set('card', 'public', 'test', 'nooooooooo');
 
