@@ -56,15 +56,14 @@
   }
 
 
-PipefyApp.resizeTo('#content');
-pipefyClient.resizeTo('#content');
-  
+ 
   //p.set('card', 'public', 'test', 'nooooooooo');
 
   function close(){
    alert('a');
   
    var p = PipefyApp.init();
+   PipefyApp.resizeTo('#content');
    p.get('card', 'public', 'test').then((test) => {
       alert(test); // return actual value stored
     }).catch((error) => {
