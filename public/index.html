@@ -6,8 +6,6 @@
   <body>
     <script src="https://d1ukdhoxof1oxs.cloudfront.net/client.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <script type="text/javascript" src="./js/table.js"></script>
     <script>
       // Use Promise available from pipefyClient
       var Promise = pipefyClient.Promise;
@@ -54,33 +52,7 @@
                   return attachment.url.indexOf('https://github.com') === 0;
                 });
               },
-              buttons: [
-                {
-                  text: 'Salvar',
-                  callback: function(p) {
-                    //showInitialDropdown(p);
-                   // alert( document.getElementById('shopping').value );
- //p.set('card', 'public', 'test', 'sisisisis');
- // p.set('card', 'public', 'emoji', 'emoji');
- p.get('card', 'public', 'test').then((test) => {
-    alert(test); // return actual value stored
-  }).catch((error) => {
-    // Handle error
-    console.log(error);
-  });
-            
-                    p.showNotification('Formulario salvo!', 'success');
-                    /*
-                    getToken(p).then(function(token) {
-                      if (token && token !== "null") {
-                        showInitialDropdown(p);
-                      } else {
-                        showAuthorizeDropdown(p);
-                      }
-                    });*/
-                  }
-                },
-              ]
+              buttons: [{}]
             }
           },
         });
