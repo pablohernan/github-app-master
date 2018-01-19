@@ -59,13 +59,13 @@
   PipefyApp.resizeTo('#content');
 
   function close(){
-   p.get('card', 'public', 'test').then((test) => {
-      alert(test); // return actual value stored
+    p.get('card', 'public', 'test').then((test) => {
+      console.log(test); // return actual value stored
     }).catch((error) => {
       // Handle error
       console.log(error);
     });
-    p.closeDropdown();
+    p.showNotification('Formulario salvo!', 'success');
     
   }
 
