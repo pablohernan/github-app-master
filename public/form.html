@@ -21,7 +21,7 @@
       </select>
 <br>
 
-<a href="#callback" class="pp-btn" onclick="close()"><span>Salvar</span></a>
+<a href="#" class="pp-btn" onclick="close()"><span>Salvar</span></a>
 <br>
 <br>
 <br>
@@ -62,6 +62,7 @@
   //p.set('card', 'public', 'test', 'nooooooooo');
 
   function close(){
+   alert('a');
    var p = PipefyApp.init();
    p.get('card', 'public', 'test').then((test) => {
       alert(test); // return actual value stored
