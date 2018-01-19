@@ -54,34 +54,7 @@
                   return attachment.url.indexOf('https://github.com') === 0;
                 });
               },
-              buttons: [
-                {
-                  text: 'Salvar',
-                  callback: function(p) {
-                    //showInitialDropdown(p);
-                   // alert( document.getElementById('shopping').value );
- //p.set('card', 'public', 'test', 'sisisisis');
- // p.set('card', 'public', 'emoji', 'emoji');
- p.get('card', 'public', 'test').then((test) => {
-    alert(test); // return actual value stored
-  }).catch((error) => {
-    // Handle error
-    console.log(error);
-  });
-            
-                    p.showNotification('Formulario salvo!', 'success');
-                    p.closeDropdown();
-                    /*
-                    getToken(p).then(function(token) {
-                      if (token && token !== "null") {
-                        showInitialDropdown(p);
-                      } else {
-                        showAuthorizeDropdown(p);
-                      }
-                    });*/
-                  }
-                },
-              ]
+
             }
           },
         });
