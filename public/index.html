@@ -42,6 +42,13 @@
      
 
       document.addEventListener("DOMContentLoaded", function(event) {
+        
+var iDiv = document.createElement('div');
+iDiv.id = 'block';
+iDiv.className = 'block';
+iDiv.innerHTML = 'TESTE';
+document.getElementsByTagName('body')[0].appendChild(iDiv);
+
         pipefyClient.initCall({
           'card-tab': function(p, options) {
             return {
