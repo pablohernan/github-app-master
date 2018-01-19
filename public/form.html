@@ -55,15 +55,10 @@
     /* popula empresa*/
   }
 
-
- 
-  //p.set('card', 'public', 'test', 'nooooooooo');
+  var p = PipefyApp.init();
+  PipefyApp.resizeTo('#content');
 
   function close(){
-   alert('a');
-  
-   var p = PipefyApp.init();
-   PipefyApp.resizeTo('#content');
    p.get('card', 'public', 'test').then((test) => {
       alert(test); // return actual value stored
     }).catch((error) => {
