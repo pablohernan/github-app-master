@@ -61,6 +61,9 @@
                 {
                   text: 'Salvar',
                   callback: function(p) {
+
+alert( $(parent.frames[10].document.getElementById('empresa')).val() );
+
                     //showInitialDropdown(p);
                    // alert( document.getElementById('shopping').value );
  //p.set('card', 'public', 'test', 'sisisisis');
@@ -98,13 +101,6 @@
           }
         })
 
-var iDiv = document.createElement('div');
-iDiv.id = 'block';
-iDiv.className = 'block';
-iDiv.innerHTML = 'TESTE';
-document.getElementsByTagName('body')[0].appendChild(iDiv);
-
-        
       });
 
 
