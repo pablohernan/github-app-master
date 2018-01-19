@@ -21,7 +21,7 @@
       </select>
 <br>
 
-<a href="#callback" class="pp-btn" onclick="alert('aaa')"><span>Salvar</span></a>
+<a href="#callback" class="pp-btn" onclick="close()"><span>Salvar</span></a>
 <br>
 <br>
 <br>
@@ -60,6 +60,10 @@
 
   var p = PipefyApp.init();
   p.set('card', 'public', 'test', 'nooooooooo');
+
+  function close(){
+    p.closeDropdown();
+  }
 
 
 
