@@ -12,14 +12,10 @@
     </style>
 </head>
   <body>
-
-
-
-
       <label for="shopping"><b class="pp-label-text">Shopping</b></label>
       <select id="shopping" name="shopping" class="pp-custom-select" onchange="populaEmpresa($(this).val())"> 
       </select>
-<br>      
+      <br>      
       <label for="empresa"><b class="pp-label-text">Empresa</b></label>
       <select id="empresa" name="empresa" class="pp-custom-select" onchange="alert(this.selectedIndex)"> 
       </select>
@@ -52,6 +48,9 @@
     });
     /* popula empresa*/
   }
+
+
+
 
   var p = PipefyApp.init();
   p.set('card', 'public', 'test', 'nooooooooo');
