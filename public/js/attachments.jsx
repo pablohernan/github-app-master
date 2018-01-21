@@ -1,30 +1,9 @@
-// @flow
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
 
-const p = pipefyClient.init();
-const Promise = pipefyClient.Promise;
-const octicons = require("octicons")
-
-import './Example.css'
-
-const Props = {
-  onClick: PropTypes.func.isRequired,
-  children: PropTypes.any,
-}
-
-class Example extends Component  {
+class Attachments extends React.Component {
   render() {
-    return (
-      <button className="Example" onClick={this.props.onClick}>
-        2-Button: { this.props.children }
-      </button>
-    )
+    return <h1>Hello, {this.props.name}</h1>;
   }
 }
 
-Example.propTypes = Props
-
-export default Attachments
-
-
+export default Attachments;
